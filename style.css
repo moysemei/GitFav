@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+  --text-color: #E1E1E6;
+  --placeholder-color: #7C7C8A;
+
+  --thead-color: hsla(194, 72%, 13%, 1);
+  --trowodd-color: rgba(6, 22, 27, 0.50);
+  --troweven-color: #06181C;
+
+  --input-color: #06181C;
+  --button-color: #065E7C;
+}
+
+body {
+  font-size: 2.0rem;
+  color: var(--text-color);
+  background-color: black;
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  height: 4.8rem;
+  width: 46.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 .8rem;
+
+  background-color: var(--input-color);
+
+  color: var(--placeholder-color);
+
+  margin-right: .8rem;
+}
+
+.search button {
+  background-color: var(--button-color);
+  border-radius: 0.5rem;
+  height: 4.8rem;
+  border: none;
+  padding: 0 3.2rem 0 3.2rem;
+
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: white;
+  color: var(--button-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8.7rem;
+
+  outline: 1px solid hsla(191, 31%, 42%, 1);
+  
+}
+
+table * {
+  font-size: 2.0rem;
+
+}
+
+table th {
+  background: var(--thead-color);
+  text-align: left;
+  font-weight: bold;
+  padding: 1.5rem;
+
+}
+
+table th:first-child {
+  border-top-left-radius: .7rem;
+}
+
+table th:last-child {
+  border-top-right-radius: .7rem;
+}
+
+table tr:nth-child(even) {
+  background: var(--troweven-color);
+}
+
+table tr:nth-child(odd) {
+  background: var(--trowodd-color);
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  margin: 2.4rem;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td button {
+  border: none;
+  
+  background: none;
+
+  color: #F75A68;
+  cursor: pointer;
+}
